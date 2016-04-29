@@ -38,7 +38,11 @@ include $(PREBUILT_SHARED_LIBRARY)
 include $(CLEAR_VARS)
  
 LOCAL_MODULE :=ffmpeg_codec
-LOCAL_SRC_FILES :=com_carl_ffmpeg4android_FFmpegNative.c
+LOCAL_SRC_FILES :=com_carl_ffmpeg4android_FFmpegNative.c \
+					ffmpeg.c \
+					ffmpeg_opt.c \
+					ffmpeg_filter.c \
+					cmdutils.c 
  
 LOCAL_LDLIBS := -llog -ljnigraphics -lz -landroid
 LOCAL_SHARED_LIBRARIES:= avcodec-56-prebuilt avdevice-56-prebuilt avfilter-5-prebuilt avformat-56-prebuilt avutil-54-prebuilt swresample-1-prebuilt swscale-3-prebuilt
